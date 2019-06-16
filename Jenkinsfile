@@ -20,7 +20,7 @@ pipeline {
     }
     stage('Deployment') {
       environment {
-        FETCH_BOT_TOKEN = credentials('github')
+        FETCH_BOT_TOKEN = credentials('github_webhook_pat')
       }
 
       when {
