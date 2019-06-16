@@ -29,7 +29,7 @@ pipeline {
 
       steps {
         sh "rm -Rf site" // remove the previously built site
-        sh "pipenv run mkdocs gh-deploy -b feature/deployment-test"
+        sh "pipenv run mkdocs gh-deploy -b feature/deployment-test -f mkdocs.yml"
       }
 
     } // deployment stage
