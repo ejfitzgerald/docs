@@ -29,8 +29,9 @@ pipeline {
 
       steps {
         sh 'git rev-parse --short HEAD'
+        sh 'pwd'
         sh "rm -Rf site" // remove the previously built site
-        sh "pipenv run mkdocs gh-deploy -b feature/deployment-test -f mkdocs.yml"
+        sh "pipenv run mkdocs gh-deploy -b feature/deployment-test"
       }
 
     } // deployment stage
