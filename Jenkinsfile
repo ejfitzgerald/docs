@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image "gcr.io/fetch-ai-images/ci-python:0.1.3"
+      image "gcr.io/fetch-ai-images/ci-python:0.1.4"
       label "prod-jenkins-slave"
     }
   }
@@ -18,10 +18,9 @@ pipeline {
       }
     }
     stage('Deployment') {
-      // environment {
-      //   GIT_USERNAME = 'fetch-bot'
-      //   GIT_PASSWORD = credentials('fetchbot-token')
-      // }
+      environment {
+        FETCH_BOT_TOKEN = credentials('github')
+      }
 
       when {
         branch "feature/deployment"
