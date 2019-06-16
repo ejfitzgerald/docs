@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image "gcr.io/fetch-ai-images/ci-python:0.1.2"
+      image "gcr.io/fetch-ai-images/ci-python:0.1.3"
       label "prod-jenkins-slave"
     }
   }
