@@ -1,4 +1,5 @@
 pipeline {
+
   agent {
     docker {
       image "gcr.io/fetch-ai-images/ci-python:0.1.4"
