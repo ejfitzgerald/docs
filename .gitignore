@@ -16,6 +16,7 @@ nodes/
 *~
 *.swp
 .idea/
+.vscode/
 *.osm
 tags
 
